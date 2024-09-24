@@ -16,9 +16,9 @@ class Car:
         self.direction = self.DIRECTIONS[(self.DIRECTIONS.index(self.direction) + 1) % 4]
 
     def move_forward(self, width, height):
-        if self.direction == 'N' and self.y < height - 1:
+        if self.direction == 'N' and self.y <= height - 1:
             self.y += 1
-        elif self.direction == 'E' and self.x < width - 1:
+        elif self.direction == 'E' and self.x <= width - 1:
             self.x += 1
         elif self.direction == 'S' and self.y > 0:
             self.y -= 1
